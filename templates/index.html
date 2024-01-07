@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kriptovaliutų ir blokų grandinės kurso registracija</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<h1>Prisijunkite prie kriptovaliutų ir blokų grandinės kurso!</h1>
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="name">Vardas:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="surname">Pavardė:</label>
+    <input type="text" id="surname" name="surname" required>
+  </div>
+  <div class="form-group">
+    <label for="dateOfBirth">Gimimo data:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+  </div>
+  <div class="form-group">
+    <label for="city">Miestas:</label>
+    <input type="text" id="city" name="city" required>
+  </div>
+  <div class="form-group">
+    <label for="country">Šalis:</label>
+    <select id="country" name="country" required>
+      <option value="">Pasirinkite šalį</option>
+      {% for country in countries %}
+    <option value="{{ country }}">{{ country }}</option>
+    {% endfor %}
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="email">El. pašto adresas:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="telephone">Telefono numeris:</label>
+    <input type="tel" id="telephone" name="telephone" required>
+  </div>
+  <div class="form-group">
+    <label for="knowledge">Jūsų žinios apie kriptovaliutas ir blokų grandinės technologiją:</label>
+    <br>
+    <label for="knowledge-beginner">
+      <input type="radio" id="knowledge-beginner" name="knowledge" value="pradžia">
+      Pradedantysis
+    </label>
+    <br>
+    <label for="knowledge-intermediate">
+      <input type="radio" id="knowledge-intermediate" name="knowledge" value="vidutinis">
+      Vidutinis
+    </label>
+    <br>
+    <label for="knowledge-advanced">
+      <input type="radio" id="knowledge-advanced" name="knowledge" value="pažengęs">
+      Pažengęs
+    </label>
+  </div>
+  <button type="submit">Registruotis</button>
+</form>
+</body>
+</html>

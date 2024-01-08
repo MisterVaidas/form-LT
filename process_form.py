@@ -38,7 +38,8 @@ def index():
             )
 
             mail.send(msg)
-            return 'Registration successful!'
+            # return 'Registration successful!'
+            return render_template('index.html', success=True)
         except Exception as e:
             print(f"An error occurred: {e}")
 
@@ -46,7 +47,7 @@ def index():
 
     else:
         countries = [country.name for country in pycountry.countries]
-        return render_template('index.html', countries=countries)
+        return render_template('index.html', success=False, countries=countries)
     
 if __name__ == '__main__':
     app.run(debug=False)

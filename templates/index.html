@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Kriptovaliutų ir blokų grandinės kurso registracija</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
@@ -66,5 +67,19 @@
   <button type="submit">Registruotis</button>
 </form>
 </div>
+{% if success %}
+    <script>
+        Swal.fire({
+            title: 'Success!',
+            text: 'Registration successful!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/'; 
+            }
+        });
+    </script>
+    {% endif %}
 </body>
 </html>

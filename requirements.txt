@@ -25,6 +25,7 @@ pycountry==23.12.11
 PyGObject==3.42.1
 PyJWT==2.3.0
 pyparsing==2.4.7
+Cython==3.0.2
 PyYAML==5.4.1
 SecretStorage==3.3.1
 six==1.16.0

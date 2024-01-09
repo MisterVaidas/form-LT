@@ -3,7 +3,7 @@ click==8.1.7
 cryptography==3.4.8
 dbus-python==1.2.18
 distro==1.7.0
-distro-info==1.1+ubuntu0.1
+distro-info==1.0
 Flask==3.0.0
 Flask-Mail==0.9.1
 gunicorn==21.2.0

@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify, render_template
 from flask_mail import Mail, Message
-from config import email_user, email_password
+import os
 import pycountry
 
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.ionos.co.uk'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = email_user
-app.config['MAIL_PASSWORD'] = email_password
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER', 'default_email_user')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASSWORD', 'default_email_password')
+
 mail = Mail(app)
 
 @app.route('/', methods=['GET', 'POST'])

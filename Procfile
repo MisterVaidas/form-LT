@@ -1,1 +1,1 @@
-web: gunicorn process_form:app
+web: gunicorn wsgi:app

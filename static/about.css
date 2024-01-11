@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    color: #66DA26;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.course-details {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    margin-bottom: 10px;
+}
+
+.about-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-link {
+    color: #66DA26;
+    text-decoration: none;
+    font-weight: bold;
+}

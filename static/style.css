@@ -95,7 +95,7 @@ button[type="submit"]:active {
 .about-course-btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #4CAF50; 
+  background-color: blue; 
   color: white; 
   text-align: center;
   text-decoration: none;

@@ -52,3 +52,8 @@ def index():
     
 if __name__ == '__main__':
     app.run(debug=False)
+    
+@app.route('/about')
+def about():
+    return render_template('about.html')
+

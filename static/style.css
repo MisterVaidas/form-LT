@@ -103,6 +103,19 @@ button[type="submit"]:active {
   border-radius: 10px;
   transition: background-color 0.3s, transform 0.1s;
   margin: 20px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px #66ff66, 0 0 20px #66ff66, 0 0 40px #66ff66, 0 0 60px #66ff66;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+      box-shadow: 0 0 5px #66ff66, 0 0 10px #66ff66, 0 0 15px #66ff66, 0 0 20px #66ff66;
+  }
+  to {
+      box-shadow: 0 0 15px #66ff66, 0 0 30px #66ff66, 0 0 45px #66ff66, 0 0 60px #66ff66;
+  }
 }
 
 .about-course-btn:hover {

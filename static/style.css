@@ -102,6 +102,7 @@ button[type="submit"]:active {
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.1s;
+  margin: 20px;
 }
 
 .about-course-btn:hover {

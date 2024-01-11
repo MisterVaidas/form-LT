@@ -112,3 +112,13 @@ button[type="submit"]:active {
 .about-course-btn:active {
   transform: scale(0.98); 
 }
+
+.sticky-container {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0; 
+  z-index: 10; 
+  background-color: #fff; 
+  padding: 10px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}

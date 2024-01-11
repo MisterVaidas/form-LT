@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     color: white;
-    background-color: rgb(2, 2, 66);
+    background-color: rgb(3, 3, 20);
     margin: 0;
     padding: 0;
    /* background-image: url('blockImg1.png');
@@ -18,15 +18,14 @@ body {
 }
 
 .title {
-    color: white;
+    color: #4CAF50;
     text-align: center;
 }
 
 .intro-text {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-weight: 600;
 }
 
 .course-details {

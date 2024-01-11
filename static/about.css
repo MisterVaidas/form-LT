@@ -4,11 +4,7 @@ body {
     background-color: rgb(4, 4, 36);
     margin: 0;
     padding: 0;
-   /* background-image: url('blockImg1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
+   
 }
 
 .about-container {
@@ -20,6 +16,7 @@ body {
 .title {
     color: #4CAF50;
     text-align: center;
+    font-size: large;
 }
 
 .intro-text {

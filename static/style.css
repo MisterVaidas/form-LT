@@ -95,12 +95,12 @@ button[type="submit"]:active {
 .about-course-btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: blue; 
+  background-color: rgb(15, 4, 158); 
   color: white; 
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s, transform 0.1s;
   margin: 20px;
 }

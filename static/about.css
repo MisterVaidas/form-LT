@@ -37,7 +37,7 @@ body {
 }
 
 .course-list {
-    list-style-type: none;
+    list-style-type: circle;
     padding: 0;
 }
 

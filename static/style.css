@@ -91,3 +91,23 @@ button[type="submit"]:active {
   font-size: 1.5rem;
   color: white;
 }
+
+.about-course-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4CAF50; 
+  color: white; 
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.about-course-btn:hover {
+  background-color: #3e8e41; 
+}
+
+.about-course-btn:active {
+  transform: scale(0.98); 
+}

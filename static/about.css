@@ -38,7 +38,7 @@ body {
 
 .course-list {
     list-style-type: circle;
-    padding: 0;
+    padding: 10px;
 }
 
 .course-list li {

@@ -83,6 +83,17 @@ button[type="submit"]:disabled:hover {
   background-color: #ccc; 
 }
 
+.checkbox-inline {
+  display: inline-block;
+  margin-right: 10px; 
+  vertical-align: middle; 
+}
+
+.checkbox-inline input[type="checkbox"] {
+  margin-right: 5px; 
+}
+
+
 
 @media (max-width: 768px) {
   .container {

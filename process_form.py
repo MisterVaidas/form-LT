@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify, render_template
 from flask_mail import Mail, Message
 import os
 import pycountry
+import random
+
+def generate_reference_number():
+    return 'SF' + str(random.randint(100000, 999999))
 
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.ionos.co.uk'
@@ -37,10 +41,41 @@ def index():
                 f"Telephone: {telephone_number}\n"
                 f"Knowledge Level: {knowledge}"
             )
+            
+            reference_number = generate_reference_number()
+            
+            user_email_content = (
+                f"Sveiki!\n"
+                f"Džiaugiamės galėdami patvirtinti, kad Jūsų registracija į kripto valiutu kursą buvo sėkminga!\n"
+                f"Jūsų unikalus registracijos numeris yra: {reference_number}. Prašome šį numerį nurodyti atliekant mokėjimą už kursą ir taip pat susisiekiant su mumis dėl kurso klausimų.\n"
+                f"Mokėjimas už kursą:\n"
+                f"Mokėjimą už kursą galite atlikti banko pavedimu į šią sąskaitą:\n"
+                f"Gyvenantiems Jungtineje Karalysteje:\n"
+                f"Gavejas: Vaidas Simkus\n"
+                f"Sort code: 04-00-75\n"
+                f"Account number: 07820860\n"
+                f"Gyvenantiems kitose salyse iskaitant Lietuva:\n"
+                f"Gavejas: Vaidas Simkus\n"
+                f"IBAN: GB96 REVO 0099 7005 1103 45\n"
+                f"BIC/SWIFT: REVOGB21\n"
+                f"Mokėjimo paskirtyje būtinai nurodykite savo registracijos numerį: {reference_number}.\n"
+                f"Kontaktinė informacija:\n"
+                f"Jei turite bet kokių klausimų, susisiekite su mumis:\n"
+                f"El. paštas: admin@ledgerfield.io.\n"
+                f"Nekantraujame Jus pasveikinti mūsų kursuose!\n"
+                f"Pagarbiai\n"
+                f"LedgerField.io komanda.\n"
+            )
+            
+            user_msg = Message('Registracijos patvirtinimas', 
+                               sender='admin@ledgerfield.io', 
+                               recipients=[email_address])
+            user_msg.body = user_email_content
+            mail.send(user_msg)
 
             mail.send(msg)
             # return 'Registration successful!'
-            return render_template('index.html', success=True)
+            return render_template('index.html', success=True, ref_number=reference_number)
         except Exception as e:
             print(f"An error occurred: {e}")
 
@@ -57,5 +92,3 @@ def about():
 if __name__ == '__main__':
     app.run(debug=False)
     
-
-

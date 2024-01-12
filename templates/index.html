@@ -68,8 +68,19 @@
       Pažengęs
     </label>
   </div>
-  <button type="submit">Registruotis</button>
+  <div class="form-group">
+    <input type="checkbox" id="confirmRead" name="confirmRead">
+    <label for="confirmRead">I have read the information about the course</label>
+  </div>
+  <button type="submit" id="submitButton" disabled>Registruotis</button>
 </form>
+
+<script>
+    document.getElementById('confirmRead').addEventListener('change', function(e) {
+        document.getElementById('submitButton').disabled = !e.target.checked;
+    });
+</script>
+
 </div>
 <footer class="footer-container">
   <p class="footer-text">&copy; 2024 LedgerField.io. Visos teisės saugomos. </p>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Confirmation</title>
+    <style>
+        .email-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            Registracija į kriptovaliutų ir blokų grandinės kursą
+        </div>
+        <div class="content">
+            <p>Sveiki,</p>
+            <p>Džiaugiamės galėdami patvirtinti, kad Jūsų registracija į kripto valiutų kursą buvo sėkminga!</p>
+            <p>Jūsų unikalus registracijos numeris yra: {{ reference_number }}. Prašome šį numerį nurodyti atliekant mokėjimą už kursą ir taip pat susisiekiant su mumis dėl kurso klausimų.</p>
+            <p>Mokėjimas už kursą:</p>
+            <p>Mokėjimą už kursą galite atlikti banko pavedimu į šią sąskaitą:</p>
+            <p>Gyvenantiems Jungtinėje Karalystėje:</p>
+            <p>Gavėjas: Vaidas Simkus</p>
+            <p>Sąskaitos kodas: 04-00-75</p>
+            <p>Sąskaitos numeris: 07820860</p>
+            <p>Gyvenantiems kitose šalyse,  įskaitant Lietuvą:</p>
+            <p>Gavėjas: Vaidas Simkus</p>
+            <p>IBAN: GB96 REVO 0099 7005 1103 45</p>
+            <p>BIC/SWIFT: REVOGB21</p>
+            <p>Mokėjimo paskirtyje būtinai nurodykite savo registracijos numerį: {{ reference_number }}.</p>
+            <p>Kontaktinė informacija:</p>
+            <p>Jei turite bet kokių klausimų, susisiekite su mumis:</p>
+            <p>El. paštas: admin@ledgerfield.io</p>
+            <p>Nekantraujame Jus pasveikinti mūsų kursuose!</p>
+            <p>Pagarbiai,</p>
+            <p>LedgerField.io komanda.</p>
+        </div>
+        <div class="footer">
+            &copy; 2024 LedgerField.io. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

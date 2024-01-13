@@ -5,7 +5,7 @@ import pycountry
 import random
 
 def generate_reference_number():
-    return 'SF' + str(random.randint(100000, 999999))
+    return 'LF' + str(random.randint(100000, 999999))
 
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.ionos.co.uk'

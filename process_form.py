@@ -50,7 +50,7 @@ def index():
 
             mail.send(admin_msg)
             # return 'Registration successful!'
-            return render_template('index.html', success=True, ref_number=reference_number)
+            return render_template('index.html', success=True, reference_number=reference_number)
         except Exception as e:
             print(f"An error occurred: {e}")
 

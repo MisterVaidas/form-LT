@@ -31,7 +31,8 @@ def index():
             
             reference_number = generate_reference_number()
             
-            user_html_content = render_template('email_template.html', reference_number=reference_number)
+            user_html_content = render_template('email_template.html', 
+                                                reference_number=reference_number)
             
             user_msg = Message('Registracijos patvirtinimas', 
                                sender='admin@ledgerfield.io', 
@@ -40,9 +41,15 @@ def index():
             mail.send(user_msg)
             
             admin_html_content = render_template('admin_email_template.html', 
-                                                 name=name, surname=surname, 
-                                                 date_of_birth=date_of_birth, city=city, 
-                                                 country=country, email=email_address, telephone=telephone_number, knowledge=knowledge, reference_number=reference_number)
+                                                 name=name, 
+                                                 surname=surname, 
+                                                 date_of_birth=date_of_birth, 
+                                                 city=city, 
+                                                 country=country, 
+                                                 email=email_address, 
+                                                 telephone=telephone_number, 
+                                                 knowledge=knowledge, 
+                                                 reference_number=reference_number)
             admin_msg = Message('New Course Registration',
                                 sender='admin@ledgerfield.io',
                                 recipients=['admin@ledgerfield.io'])

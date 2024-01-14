@@ -39,19 +39,14 @@ def index():
             user_msg.html = user_html_content
             mail.send(user_msg)
             
-            admin_msg = Message('New Course Registration', sender='admin@ledgerfield.io', recipients=['admin@ledgerfield.io'])
-            admin_msg.body = (
-                f"New registration:\n"
-                f"Name: {name}\n"
-                f"Surname: {surname}\n"
-                f"Date of Birth: {date_of_birth}\n"
-                f"City: {city}\n"
-                f"Country: {country}\n"
-                f"Email: {email_address}\n"
-                f"Telephone: {telephone_number}\n"
-                f"Knowledge Level: {knowledge}\n"
-                f"Reference number: {reference_number}"
-            )
+            admin_html_content = render_template('admin_email_template.html', 
+                                                 name=name, surname=surname, 
+                                                 date_of_birth=date_of_birth, city=city, 
+                                                 country=country, email=email_address, telephone=telephone_number, knowledge=knowledge, reference_number=reference_number)
+            admin_msg = Message('New Course Registration',
+                                sender='admin@ledgerfield.io',
+                                recipients=['admin@ledgerfield.io'])
+            admin_msg.html = admin_html_content
 
             mail.send(admin_msg)
             # return 'Registration successful!'

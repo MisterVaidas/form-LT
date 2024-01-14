@@ -30,9 +30,17 @@ def index():
             knowledge = request.form['knowledge']
             
             reference_number = generate_reference_number()
-
-            msg = Message('New Course Registration', sender='admin@ledgerfield.io', recipients=['admin@ledgerfield.io'])
-            msg.body = (
+            
+            user_html_content = render_template('email_template.html', reference_number=reference_number)
+            
+            user_msg = Message('Registracijos patvirtinimas', 
+                               sender='admin@ledgerfield.io', 
+                               recipients=[email_address])
+            user_msg.html = user_html_content
+            mail.send(user_msg)
+            
+            admin_msg = Message('New Course Registration', sender='admin@ledgerfield.io', recipients=['admin@ledgerfield.io'])
+            admin_msg.body = (
                 f"New registration:\n"
                 f"Name: {name}\n"
                 f"Surname: {surname}\n"
@@ -44,18 +52,8 @@ def index():
                 f"Knowledge Level: {knowledge}\n"
                 f"Reference number: {reference_number}"
             )
-            
-            
-            
-            html_content = render_template('email_template.html', reference_number=reference_number)
-            
-            user_msg = Message('Registracijos patvirtinimas', 
-                               sender='admin@ledgerfield.io', 
-                               recipients=[email_address])
-            user_msg.html = html_content
-            mail.send(user_msg)
 
-            mail.send(msg)
+            mail.send(admin_msg)
             # return 'Registration successful!'
             return render_template('index.html', success=True, ref_number=reference_number)
         except Exception as e:

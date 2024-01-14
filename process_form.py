@@ -28,6 +28,8 @@ def index():
             email_address = request.form['email']
             telephone_number = request.form['telephone']
             knowledge = request.form['knowledge']
+            
+            reference_number = generate_reference_number()
 
             msg = Message('New Course Registration', sender='admin@ledgerfield.io', recipients=['admin@ledgerfield.io'])
             msg.body = (
@@ -39,10 +41,11 @@ def index():
                 f"Country: {country}\n"
                 f"Email: {email_address}\n"
                 f"Telephone: {telephone_number}\n"
-                f"Knowledge Level: {knowledge}"
+                f"Knowledge Level: {knowledge}\n"
+                f"Reference number: {reference_number}"
             )
             
-            reference_number = generate_reference_number()
+            
             
             html_content = render_template('email_template.html', reference_number=reference_number)
             

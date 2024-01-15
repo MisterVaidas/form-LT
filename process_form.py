@@ -28,6 +28,7 @@ def index():
             email_address = request.form['email']
             telephone_number = request.form['telephone']
             knowledge = request.form['knowledge']
+            facebook_link = request.form['facebook']
             
             reference_number = generate_reference_number()
             
@@ -49,7 +50,8 @@ def index():
                                                  email=email_address, 
                                                  telephone=telephone_number, 
                                                  knowledge=knowledge, 
-                                                 reference_number=reference_number)
+                                                 reference_number=reference_number,
+                                                 facebook_link=facebook_link)
             admin_msg = Message('New Course Registration',
                                 sender='admin@ledgerfield.io',
                                 recipients=['admin@ledgerfield.io'])

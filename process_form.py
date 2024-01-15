@@ -28,7 +28,7 @@ def index():
             email_address = request.form['email']
             telephone_number = request.form['telephone']
             knowledge = request.form['knowledge']
-            facebook_link = request.form['facebook']
+            facebook_link = request.form['facebook_link']
             
             reference_number = generate_reference_number()
             

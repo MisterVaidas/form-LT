@@ -44,6 +44,7 @@ input[type="text"],
 input[type="date"],
 input[type="email"],
 input[type="tel"],
+input[type="facebook"]
 select {
   width: 100%;
   padding: 10px;

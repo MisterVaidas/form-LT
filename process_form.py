@@ -51,7 +51,7 @@ def index():
                                                  telephone=telephone_number, 
                                                  knowledge=knowledge, 
                                                  reference_number=reference_number,
-                                                 facebook_url=facebook_link)
+                                                 facebook_link=facebook_link)
             admin_msg = Message('New Course Registration',
                                 sender='admin@ledgerfield.io',
                                 recipients=['admin@ledgerfield.io'])

@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_mail import Mail, Message
+from job_listings import job_openings
 import os
 import pycountry
 import random
@@ -75,11 +76,7 @@ def about():
 
 @app.route('/jobs')
 def jobs():
-    job_offers = [
-        {'title': 'Software Developer', 'description': 'Job description here...'},
-        {'title': 'Product Manager', 'description': 'Job description here...'}
-    ]
-    return render_template('jobs.html', job_offers=job_offers)
+    return render_template('jobs.html', job_offers=job_openings)
 
     
 if __name__ == '__main__':

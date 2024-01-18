@@ -22,10 +22,11 @@
         <div class="job-opportunities">
             <h2>Karjeros galimybės</h2>
             {% for job in job_offers %}
-                <div class="job-offer">
-                    <h3>{{ job.title }}</h3>
-                    <p>{{ job.description }}</p>
-                </div>
+            <div class="job-offer">
+                <h3>{{ job.title }}</h3>
+                <p>{{ job.short_description }}</p> 
+                <button onclick="openModal('{{ job.title|tojson|safe }}', '{{ job.full_description|tojson|safe }}')">Read More</button>
+            </div>
             {% else %}
                 <p>Currently, there are no open positions.</p>
             {% endfor %}
@@ -34,5 +35,24 @@
             <a href="{{ url_for('index') }}" class="home-link">Grįžti atgal į formą</a>
         </footer>
     </div>
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <script>
+        function openModal(title, description) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDescription').innerText = description;
+            document.getElementById('jobModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('jobModal').style.display = 'none';
+        }
+        </script>
+        
 </body>
 </html>

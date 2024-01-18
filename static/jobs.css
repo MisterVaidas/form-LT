@@ -74,3 +74,14 @@ h1, h2, h3 {
         padding: 10px;
     }
 }
+
+.jobs-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-link {
+    color: #66DA26;
+    text-decoration: none;
+    font-weight: bold;
+}

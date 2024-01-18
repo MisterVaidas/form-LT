@@ -6,21 +6,21 @@
 </head>
 <body>
     <div class="jobs-container">
-        <h1>Join Our Team</h1>
+        <h1>Tapkite mūsų komandos dalimi</h1>
 
         <div class="team-intro">
-            <h2>About Our Team</h2>
-            <p>Here at LedgerField, we are driven by a single goal: to do our part in making the world a better place for all. We strive to build productive relationships and make a positive impact with all of our pursuits.</p>
+            <h2>Apie mūsų komandą</h2>
+            <p>LedgerField komandoje mus visus vienija vienas tikslas: prisidėti prie geresnio pasaulio kūrimo kiekvienam. Siekiame kurti produktyvius santykius ir daryti teigiamą poveikį visose savo veiklos srityse.</p>
             <img src="{{ url_for('static', filename='team.jpg') }}" alt="LedgerField Team" class="team-image">
         </div>
 
         <div class="vision-statement">
-            <h2>Our Vision</h2>
-            <p>We’re looking for innovative, passionate, and hardworking individuals who are ready to take on new challenges and contribute to our mission. Join us in shaping the future!</p>
+            <h2>Mūsų vizija</h2>
+            <p>Mums reikia drąsuolių, pilnų idėjų ir noro veikti, pasiruošusių kibti į naujus projektus ir padėti mums pakeisti pasaulį. Stokit į vieną gretą ir kurkim ateitį drauge!</p>
         </div>
 
         <div class="job-opportunities">
-            <h2>Open Positions</h2>
+            <h2>Karjeros galimybės</h2>
             {% for job in job_offers %}
                 <div class="job-offer">
                     <h3>{{ job.title }}</h3>

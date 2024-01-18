@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.jobs-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.team-intro {
+    text-align: center;
+}
+
+.team-intro h2 {
+    color: #007bff;
+}
+
+.team-intro p {
+    font-size: 1.1em;
+}
+
+.team-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.vision-statement {
+    background-color: #e7f1ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.vision-statement h2 {
+    color: #007bff;
+}
+
+.job-opportunities {
+    margin-top: 20px;
+}
+
+.job-offer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.job-offer h3 {
+    margin-top: 0;
+}
+
+.job-offer p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .jobs-container {
+        width: 95%;
+        padding: 10px;
+    }
+}

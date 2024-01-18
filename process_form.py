@@ -72,6 +72,15 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/jobs')
+def jobs():
+    job_offers = [
+        {'title': 'Software Developer', 'description': 'Job description here...'},
+        {'title': 'Product Manager', 'description': 'Job description here...'}
+    ]
+    return render_template('jobs.html', job_offers=job_offers)
+
     
 if __name__ == '__main__':
     app.run(debug=False)

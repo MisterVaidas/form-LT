@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Opportunities - LedgerField</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jobs.css') }}">
+</head>
+<body>
+    <div class="jobs-container">
+        <h1>Join Our Team</h1>
+
+        <div class="team-intro">
+            <h2>About Our Team</h2>
+            <p>Here at LedgerField, we are driven by a single goal: to do our part in making the world a better place for all. We strive to build productive relationships and make a positive impact with all of our pursuits.</p>
+            <img src="{{ url_for('static', filename='team.jpg') }}" alt="LedgerField Team" class="team-image">
+        </div>
+
+        <div class="vision-statement">
+            <h2>Our Vision</h2>
+            <p>We’re looking for innovative, passionate, and hardworking individuals who are ready to take on new challenges and contribute to our mission. Join us in shaping the future!</p>
+        </div>
+
+        <div class="job-opportunities">
+            <h2>Open Positions</h2>
+            {% for job in job_offers %}
+                <div class="job-offer">
+                    <h3>{{ job.title }}</h3>
+                    <p>{{ job.description }}</p>
+                </div>
+            {% else %}
+                <p>Currently, there are no open positions.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

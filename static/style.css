@@ -170,8 +170,8 @@ button[type="submit"]:disabled:hover {
   margin: 20px;
   cursor: pointer;
   border: none;
-  box-shadow: 0 0 10px #66ff66, 0 0 20px #66ff66, 0 0 40px #66ff66, 0 0 60px #66ff66;
-  animation: pulse 1.5s infinite alternate;
+  /*box-shadow: 0 0 10px #66ff66, 0 0 20px #66ff66, 0 0 40px #66ff66, 0 0 60px #66ff66;
+  animation: pulse 1.5s infinite alternate;*/
 }
 
 .join-team-btn:hover {

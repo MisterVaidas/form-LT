@@ -24,7 +24,6 @@ job_openings = [
                 <li>Excellent communication and presentation skills, with the ability to break down complex topics into understandable language.</li>
                 <li>Proven ability to develop educational content and materials.</li>
                 <li>A passion for continuous learning and professional development in the field of blockchain and cryptocurrencies.</li>
-                <li>Bachelor’s degree in Computer Science, Finance, or a related field is preferred.</li>
                 <li>Familiarity with online teaching tools and platforms.</li>
             </ul>
 

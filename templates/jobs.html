@@ -44,6 +44,8 @@
     </div>
     <script>
         function openModal(title, description) {
+            console.log(title); // Debugging
+            console.log(description); // Debugging
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDescription').innerHTML = description;
             document.getElementById('jobModal').style.display = 'block';

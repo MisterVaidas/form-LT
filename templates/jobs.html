@@ -26,6 +26,9 @@
                 <h3>{{ job.title }}</h3>
                 <p>{{ job.short_description }}</p> 
                 <button onclick="openModal('{{ job.title|tojson|safe }}', '{{ job.full_description|tojson|safe }}')">Read More</button>
+                console.log({{ job.title|tojson|safe }});
+                console.log({{ job.full_description|tojson|safe }});
+
             </div>
             {% else %}
                 <p>Currently, there are no open positions.</p>

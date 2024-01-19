@@ -36,5 +36,5 @@ job_openings = [
 
             <p>If you are passionate about educating others and have a strong background in cryptocurrencies and blockchain technology, we would love to hear from you!</p>
         '''
-    },
+    }
 ]
